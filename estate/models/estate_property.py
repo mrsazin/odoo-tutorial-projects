@@ -12,7 +12,7 @@ class EstateProperty(models.Model):
     description = fields.Text(string='Description')
     postcode = fields.Char(string='')
     date_availability = fields.Date(string='')
-    expected_price = fields.Float(string='', digits=(16, 2))
+    expected_price = fields.Float(string='', digits=(16, 2) , required=True)
     selling_price = fields.Float(string='', digits=(16, 2))
     bedrooms = fields.Integer(string='')
     living_area = fields.Integer(string='')
