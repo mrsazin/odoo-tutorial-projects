@@ -12,8 +12,8 @@
             </div>
             <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center justify-content-between">
-                    <Card title="'card 1'" content="'content of card 1'"/>
-                    <Card title="'card 2'" content="'content of card 2'"/>
+                    <Card title="'card 1'" content="escapedContent"/>
+                    <Card title="'card 2'" content="renderedContent"/>
                 </div>
             </div>
         </div>
