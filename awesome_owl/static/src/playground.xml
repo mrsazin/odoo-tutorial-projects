@@ -5,11 +5,9 @@
             <div class="d-flex align-items-center justify-content-between">
                 <!-- متن Hello World در سمت چپ -->
                 <span class="ms-3">hello world</span>
-
-                <!-- باکس کانتر در سمت راست -->
-                <div class="d-flex align-items-center gap-2 border p-3 rounded">
-                    <span>Counter: <t t-esc="state.value"/></span>
-                    <button class="btn btn-primary" t-on-click="increment">Increment</button>
+                <div class="d-flex align-items-center gap-3">
+                    <Counter/>
+                    <Counter/>
                 </div>
             </div>
         </div>
