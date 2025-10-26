@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
-
     <t t-name="awesome_owl.playground">
-        <div class="p-3">
-            hello world
+        <div class="card p-3 d-inline-block" style="min-width: 18rem;">
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- متن Hello World در سمت چپ -->
+                <span class="ms-3">hello world</span>
+
+                <!-- باکس کانتر در سمت راست -->
+                <div class="d-flex align-items-center gap-2 border p-3 rounded">
+                    <span>Counter: <t t-esc="state.value"/></span>
+                    <button class="btn btn-primary" t-on-click="increment">Increment</button>
+                </div>
+            </div>
         </div>
     </t>
-
 </templates>
