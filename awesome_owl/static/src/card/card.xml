@@ -1,0 +1,12 @@
+<t t-name="awesome_owl.card" owl="1">
+    <div class="card d-inline-block m-2" style="width: 18rem;">
+        <div class="card-body p-2 border rounded">
+            <h5 class="card-title">
+                <t t-esc="props.title"/>
+            </h5>
+            <p class="card-text">
+                <t t-esc="props.content"/>
+            </p>
+        </div>
+    </div>
+</t>
