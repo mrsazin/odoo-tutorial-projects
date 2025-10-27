@@ -21,6 +21,11 @@
 
                 </div>
             </div>
+            <div class="card d-inline-block m-2" style="width: 18rem;">
+            <div class="card-body p-2 border rounded">
+                <TodoList/>
+            </div>
+            </div>
         </div>
     </t>
 </templates>

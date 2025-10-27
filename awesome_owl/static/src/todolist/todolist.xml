@@ -1,0 +1,16 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_owl.todoitem" owl="1">
+        <div>
+            <t t-esc="props.todo.id"/>.
+            <t t-esc="props.todo.description"/>
+        </div>
+    </t>
+
+    <t t-name="awesome_owl.todolist" owl="1">
+        <div>
+            <t t-foreach="todos" t-as="todo" t-key="todo.id">
+                    <TodoItem todo="todo"/>
+                </t>
+        </div>
+    </t>
+</templates>
