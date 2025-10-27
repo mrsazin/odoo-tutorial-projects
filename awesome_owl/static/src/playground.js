@@ -13,6 +13,10 @@ export class Playground extends Component {
 
          // This will be RENDERED (shown as blue HTML)
          this.renderedContent = markup("<div class='text-primary'>rendered content</div>");
+         this.state= useState({sum:0});
 }
-
+    incrementSum(value) {
+        // This will be called every time a counter changes
+        this.state.sum += 1;
+    }
 }
