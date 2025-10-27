@@ -8,7 +8,8 @@ export class TodoList extends Component {
     static props = {};
     setup() {
         this.todos = useState([
-            { id: 3, description: "buy milk", isCompleted: false },
+            { id: 1, description: "write tutorial", isCompleted: true },
+            { id: 2, description: "buy milk", isCompleted: false },
         ]);
     }
 }
