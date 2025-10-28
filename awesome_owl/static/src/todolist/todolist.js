@@ -1,6 +1,7 @@
 /** @odoo-module **/
 import { Component ,useState,useRef, onMounted } from "@odoo/owl";
 import { TodoItem } from "./todoitem";
+import { useAutofocus } from "../utils";
 
 export class TodoList extends Component {
     static template = "awesome_owl.todolist";
@@ -8,13 +9,8 @@ export class TodoList extends Component {
     static props = {};
     setup() {
         this.todos = useState([]); // reactive list
-        this.inputRef = useRef("input"); // create a reference to the input element
+        this.inputRef = useAutofocus("input"); // it will auto-focus
         this.nextId = 0; // counter for unique IDs
-
-        // hook that runs when component appears in the DOM
-        onMounted(()=> {
-            this.inputRef.el.focus();
-        })
     }
     addTodo(ev) {
         if (ev.key === 'Enter') { // ev.keyCode === 13
