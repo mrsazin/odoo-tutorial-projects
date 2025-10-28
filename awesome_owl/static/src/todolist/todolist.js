@@ -26,4 +26,11 @@ export class TodoList extends Component {
              this.inputRef.el.value = "";
         }
     }
+    //  تابع جدید برای toggle کردن state
+    toggleTodo(todoId) {
+        const todo = this.todos.find(t => t.id === todoId);
+        if (todo) {
+            todo.isCompleted = !todo.isCompleted; // 🔄 تغییر حالت
+        }
+    }
 }

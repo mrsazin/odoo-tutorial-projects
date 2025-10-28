@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates xml:space="preserve">
     <t t-name="awesome_owl.todoitem" owl="1">
-        <div
-                class="p-2"
-                t-att-class="{'text-muted text-decoration-line-through': props.todo.isCompleted}"
-        >
+         <div class="d-flex align-items-center p-2 border-bottom">
+             <input
+                     type="checkbox"
+                     class="form-check-input me-2"
+                     t-att-checked="props.todo.isCompleted"
+                     t-on-change="onToggle"
+             />
+             <span t-att-class="props.todo.isCompleted ? 'text-muted text-decoration-line-through' : ''">
             <t t-esc="props.todo.id"/>.
-            <t t-esc="props.todo.description"/>
+                 <t t-esc="props.todo.description"/>
+            </span>
         </div>
     </t>
 
@@ -18,8 +23,8 @@
                    placeholder="Add a todo"
                    t-on-keyup="addTodo"/>
             <t t-foreach="todos" t-as="todo" t-key="todo.id">
-                    <TodoItem todo="todo"/>
-                </t>
+                    <TodoItem todo="todo" toggleState.bind="toggleTodo"/>
+            </t>
         </div>
         </t>
 </templates>
