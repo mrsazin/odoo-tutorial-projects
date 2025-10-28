@@ -2,6 +2,13 @@
 <templates xml:space="preserve">
     <t t-name="awesome_owl.todoitem" owl="1">
          <div class="d-flex align-items-center p-2 border-bottom">
+             <button
+                    type="button"
+                    class="btn btn-sm btn-outline-danger"
+                    t-on-click="onRemove"
+            >
+                    <i class="fa fa-trash"></i>
+                 </button>
              <input
                      type="checkbox"
                      class="form-check-input me-2"
@@ -23,7 +30,7 @@
                    placeholder="Add a todo"
                    t-on-keyup="addTodo"/>
             <t t-foreach="todos" t-as="todo" t-key="todo.id">
-                    <TodoItem todo="todo" toggleState.bind="toggleTodo"/>
+                    <TodoItem todo="todo" toggleState.bind="toggleTodo" removeTodo.bind="removeTodo"/>
             </t>
         </div>
         </t>

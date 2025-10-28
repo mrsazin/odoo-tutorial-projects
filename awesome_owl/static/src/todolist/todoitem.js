@@ -6,12 +6,18 @@ export class TodoItem extends Component {
     static props = {
         todo: Object,
         toggleState: { type: Function, optional: true },
+        removeTodo: { type: Function, optional: true },
     };
 
     //  تابع جدید برای handle کردن تغییر checkbox
     onToggle(ev) {
         if (this.props.toggleState) {
             this.props.toggleState(this.props.todo.id);
+        }
+    }
+    onRemove() {
+        if (this.props.removeTodo) {
+            this.props.removeTodo(this.props.todo.id);
         }
     }
 }
