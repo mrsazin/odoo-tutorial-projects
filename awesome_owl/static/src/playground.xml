@@ -16,9 +16,9 @@
             </div>
             <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center justify-content-between">
-                    <Card title="'card 1'" ><div t-esc="escapedContent"/></Card>
-                    <Card title="'card 2'" ><div t-out="renderedContent"/></Card>
-                    <Card title="'card 3'" ><Counter/></Card>
+                    <Card title="'card 1'"><div t-esc="escapedContent"/></Card>
+                    <Card title="'card 2'"><div t-out="renderedContent"/></Card>
+                    <Card title="'card 3'"><Counter/></Card>
                 </div>
             </div>
             <div class="card d-inline-block m-2" style="width: 18rem;">
